@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MèoÔnThi-Ôn thi THPT Quốc Gia 2026</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<style>
+:root {
+    --primary-100: #d9e4ff;
+    --primary-200: #b3c9ff;
+    --primary-300: #8daef5;
+    --primary-400: #6793e8;
+    --primary-500: #4178db;
+    --primary-600: #2b5ec4;
+    --primary-700: #1a45a8;
+    
+    --secondary-100: #ffe0f0;
+    --secondary-200: #ffc2e0;
+    --secondary-300: #ffa3d1;
+    --secondary-400: #ff85c2;
+    --secondary-500: #ff66b2;
+    --secondary-600: #ff47a3;
+    --secondary-700: #f5288f;
+    
+    --accent-100: #e0f2fe;
+    --accent-200: #bae6fd;
+    --accent-300: #7dd3fc;
+    --accent-400: #38bdf8;
+    --accent-500: #0ea5e9;
+    --accent-600: #0284c7;
+    --accent-700: #0369a1;
+    
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    
+    --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
+    --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+    --shadow-xl: 0 20px 25px rgba(0,0,0,0.15);
+    --shadow-2xl: 0 25px 50px rgba(0,0,0,0.25);
+    
+    --blur: blur(10px);
+}
+
+/* Light theme */
+[data-theme="light"] {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-tertiary: #f1f5f9;
+    --bg-card: rgba(255, 255, 255, 0.9);
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-tertiary: #64748b;
+    --border-light: #e2e8f0;
+    --border-medium: #cbd5e1;
+    --card-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+    --hover-shadow: 0 20px 40px -5px rgba(99, 102, 241, 0.3);
+    --glow: 0 0 20px rgba(99, 102, 241, 0.3);
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+    --bg-card: rgba(30, 41, 59, 0.9);
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-tertiary: #94a3b8;
+    --border-light: #334155;
+    --border-medium: #475569;
+    --card-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
+    --hover-shadow: 0 20px 40px -5px rgba(99, 102, 241, 0.4);
+    --glow: 0 0 20px rgba(99, 102, 241, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* Animated Background với hiệu ứng chuyển động mềm mại */
+body::before {
+    content: '';
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 40%, var(--primary-200) 0%, transparent 30%),
+                radial-gradient(circle at 70% 60%, var(--secondary-200) 0%, transparent 30%),
+                radial-gradient(circle at 40% 80%, var(--accent-200) 0%, transparent 30%);
+    opacity: 0.4;
+    z-index: -1;
+    animation: morph 15s ease-in-out infinite;
+}
+
+@keyframes morph {
+    0% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(5%, 5%) scale(1.1); }
+    66% { transform: translate(-5%, -5%) scale(0.9); }
+    100% { transform: translate(0, 0) scale(1); }
+}
+
+/* Custom Scrollbar đẹp */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--primary-500), var(--secondary-500));
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, var(--primary-600), var(--secondary-600));
+    transform: scale(1.1);
+}
+
+/* Navigation với hiệu ứng glass đẹp */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(var(--bg-primary), 0.7);
+    backdrop-filter: var(--blur);
+    border-bottom: 1px solid var(--border-light);
+    box-shadow: var(--shadow-md);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    object-fit: cover;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: var(--shadow-lg);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.logo-img:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: var(--glow);
+}
+
+.logo-text h1 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary-600), var(--secondary-600));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo-text p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.nav-link:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.nav-link:hover {
+    background: linear-gradient(135deg, var(--primary-500), var(--secondary-500));
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--hover-shadow);
+}
+
+.theme-toggle {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-light);
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    font-size: 1.2rem;
+}
+
+.theme-toggle:hover {
+    transform: rotate(180deg) scale(1.1);
+    background: linear-gradient(135deg, var(--primary-500), var(--secondary-500));
+    color: white;
+    border-color: transparent;
+    box-shadow: var(--glow);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Hero Section với hiệu ứng ánh sáng */
+.hero-section {
+    text-align: center;
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        from 0deg,
+        var(--primary-400),
+        var(--secondary-400),
+        var(--accent-400),
+        var(--primary-400)
+    );
+    animation: rotate 10s linear infinite;
+    opacity: 0.2;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: var(--bg-primary);
+    border-radius: 30px;
+    opacity: 0.8;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Countdown với hiệu ứng pulse và shine */
+.countdown-wrapper {
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    background: linear-gradient(135deg, var(--primary-500), var(--secondary-500));
+    border-radius: 100px;
+    box-shadow: var(--shadow-xl), var(--glow);
+    margin: 2rem auto;
+    position: relative;
+    overflow: hidden;
+    animation: pulseGlow 2s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 20px var(--primary-400), 0 0 40px var(--secondary-400); }
+    50% { box-shadow: 0 0 30px var(--primary-500), 0 0 60px var(--secondary-500); }
+}
+
+.countdown-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    from { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    to { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.countdown-text {
+    color: white;
+    font-weight: 700;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.countdown-text i {
+    font-size: 1.8rem;
+    animation: bounce 2s ease infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Section Title với hiệu ứng chữ động */
+.section-title {
+    text-align: center;
+    margin: 4rem 0 3rem;
+    position: relative;
+}
+
+.section-title h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary-600), var(--secondary-600));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+    animation: titleGlow 2s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+    0%, 100% { filter: drop-shadow(0 0 2px var(--primary-400)); }
+    50% { filter: drop-shadow(0 0 10px var(--primary-500)) drop-shadow(0 0 20px var(--secondary-500)); }
+}
+
+.section-title p {
+    color: var(--text-tertiary);
+    font-size: 1.2rem;
+    animation: fadeInUp 1s ease;
+}
+
+/* Subject Grid với hiệu ứng card đẹp */
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.subject-card {
+    background: var(--bg-card);
+    backdrop-filter: var(--blur);
+    border: 1px solid var(--border-light);
+    border-radius: 30px;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.subject-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-500), var(--secondary-500));
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 0;
+}
+
+.subject-card:hover::before {
+    opacity: 0.1;
+}
+
+.subject-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    animation: rotate 10s linear infinite;
+}
+
+.subject-card:hover::after {
+    opacity: 1;
+}
+
+.subject-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: var(--hover-shadow);
+    border-color: transparent;
+}
+
+.subject-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--primary-500), var(--secondary-500));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.5s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.subject-card:hover .subject-icon {
+    transform: scale(1.2) rotate(360deg);
+}
+
+.subject-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.subject-card p {
+    color: var(--text-tertiary);
+    font-size: 0.95rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Quick Navigation với hiệu ứng mượt */
+.quick-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    margin: 2rem 0;
+    padding: 0.8rem;
+    background: var(--bg-card);
+    backdrop-filter: var(--blur);
+    border-radius: 50px;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-lg);
+}
+
+.quick-item {
+    padding: 0.8rem 1.8rem;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.quick-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.quick-item:hover::before {
+    left: 100%;
+}
+
+.quick-item:hover {
+    background: linear-gradient(135deg, var(--primary-500), var(--secondary-500));
+    color: white;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: var(--hover-shadow);
+}
+
+.quick-item.active {
+    background: linear-gradient(135deg, var(--primary-500), var(--secondary-500));
+    color: white;
+    box-shadow: var(--glow);
+    animation: activePulse 2s ease infinite;
+}
+
+@keyframes activePulse {
+    0%, 100% { box-shadow: 0 0 10px var(--primary-400); }
+    50% { box-shadow: 0 0 20px var(--primary-500), 0 0 30px var(--secondary-500); }
+}
+
+.quick-item i {
+    transition: transform 0.3s ease;
+}
+
+.quick-item:hover i {
+    transform: rotate(360deg);
+}
+
+/* Content Box với hiệu ứng depth */
+.content-box {
+    background: var(--bg-card);
+    backdrop-filter: var(--blur);
+    border: 1px solid var(--border-light);
+    border-radius: 30px;
+    padding: 2.5rem;
+    margin: 2rem 0;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.content-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 40%, var(--primary-200) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.content-box:hover::before {
+    opacity: 0.2;
+    animation: morph 10s ease infinite;
+}
+
+.content-box:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+    border-color: transparent;
+}
+
+.box-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border-light);
+    position: relative;
+}
+
+.box-header i {
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, var(--primary-500), var(--secondary-500));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: iconFloat 3s ease infinite;
+}
+
+@keyframes iconFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.box-header h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary-600), var(--secondary-600));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Content List với hiệu ứng hover đẹp */
+.content-list {
+    list-style: none;
+}
+
+.content-list li {
+    padding: 1.2rem;
+    margin: 0.8rem 0;
+    background: var(--bg-tertiary);
+    border-radius: 16px;
+    border-left: 4px solid transparent;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.content-list li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.content-list li:hover::before {
+    left: 100%;
+}
+
+.content-list li:hover {
+    border-left-color: var(--primary-500);
+    transform: translateX(10px);
+    background: var(--bg-secondary);
+    box-shadow: var(--shadow-lg);
+}
+
+.content-list li h3 {
+    font-size: 1.3rem;
+    color: var(--primary-600);
+    margin-bottom: 0.5rem;
+}
+
+.content-list li h4 {
+    font-size: 1.1rem;
+    color: var(--secondary-600);
+    margin: 1rem 0 0.5rem;
+}
+
+.content-list li a {
+    color: var(--text-primary);
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    background: linear-gradient(135deg, var(--primary-100), var(--secondary-100));
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+}
+
+.content-list li a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.content-list li a:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.content-list li a:hover {
+    background: linear-gradient(135deg, var(--primary-500), var(--secondary-500));
+    color: white;
+    transform: translateX(5px);
+    box-shadow: var(--glow);
+}
+
+/* Structure Box với hiệu ứng đẹp */
+.structure-box {
+    background: var(--bg-card);
+    backdrop-filter: var(--blur);
+    border: 1px solid var(--border-light);
+    border-radius: 30px;
+    padding: 2.5rem;
+    margin: 2rem 0;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.structure-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, var(--primary-200) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    animation: rotate 20s linear infinite;
+}
+
+.structure-box:hover::before {
+    opacity: 0.1;
+}
+
+.structure-box:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: var(--hover-shadow);
+    border-color: transparent;
+}
+
+.structure-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--primary-600), var(--secondary-600));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    position: relative;
+    animation: titleGlow 3s ease infinite;
+}
+
+.structure-box h4 {
+    font-size: 1.3rem;
+    margin: 1.5rem 0 0.8rem;
+    color: var(--text-primary);
+    padding-left: 1rem;
+    border-left: 4px solid var(--primary-500);
+    transition: all 0.3s ease;
+}
+
+.structure-box h4:hover {
+    border-left-color: var(--secondary-500);
+    transform: translateX(5px);
+}
+
+.structure-box ul {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.structure-box li {
+    padding: 0.8rem 1rem;
+    margin: 0.5rem 0;
+    background: var(--bg-tertiary);
+    border-radius: 12px;
+    color: var(--text-secondary);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.structure-box li::before {
+    content: '•';
+    color: var(--primary-500);
+    font-weight: bold;
+    position: absolute;
+    left: -0.5rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+}
+
+.structure-box li:hover {
+    transform: translateX(15px) scale(1.02);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    box-shadow: var(--shadow-md);
+}
+
+.structure-box li:hover::before {
+    left: 0.2rem;
+    opacity: 1;
+}
+
+/* Subject Title với hiệu ứng động */
+.subject-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin: 2rem 0;
+    background: linear-gradient(135deg, var(--primary-600), var(--secondary-600));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -1px;
+    animation: titlePulse 2s ease infinite, glitch 5s ease infinite;
+    position: relative;
+}
+
+@keyframes titlePulse {
+    0%, 100% { filter: drop-shadow(0 0 5px var(--primary-400)); }
+    50% { filter: drop-shadow(0 0 20px var(--primary-500)) drop-shadow(0 0 30px var(--secondary-500)); }
+}
+
+@keyframes glitch {
+    0%, 100% { transform: skew(0deg); }
+    95% { transform: skew(0deg); }
+    96% { transform: skew(5deg); }
+    97% { transform: skew(-5deg); }
+    98% { transform: skew(3deg); }
+    99% { transform: skew(-3deg); }
+}
+
+/* Buttons với hiệu ứng đẹp */
+.btn {
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+    width: 400px;
+    height: 400px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-500), var(--secondary-500));
+    color: white;
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: var(--hover-shadow);
+}
+
+.btn-secondary {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-light);
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, var(--primary-500), var(--secondary-500));
+    color: white;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: var(--hover-shadow);
+    border-color: transparent;
+}
+
+.btn-center {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+/* Footer với hiệu ứng gradient chạy */
+.footer {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-light);
+    padding: 3rem 0;
+    margin-top: 5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        var(--primary-500), 
+        var(--secondary-500), 
+        var(--accent-500), 
+        transparent
+    );
+    animation: borderFlow 3s linear infinite;
+}
+
+@keyframes borderFlow {
+    from { left: -100%; }
+    to { left: 100%; }
+}
+
+.footer::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -100%;
+    width: 200%;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        var(--accent-500), 
+        var(--secondary-500), 
+        var(--primary-500), 
+        transparent
+    );
+    animation: borderFlowReverse 3s linear infinite;
+}
+
+@keyframes borderFlowReverse {
+    from { right: -100%; }
+    to { right: 100%; }
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-text {
+    color: var(--text-tertiary);
+    font-size: 1rem;
+    line-height: 2;
+}
+
+.footer-text p {
+    margin: 0.5rem 0;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-text p:hover {
+    color: var(--primary-500);
+    transform: translateX(5px);
+}
+
+.footer-text p::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-500), var(--secondary-500));
+    transition: width 0.3s ease;
+}
+
+.footer-text p:hover::after {
+    width: 100%;
+}
+
+.footer-text i {
+    color: var(--primary-500);
+    margin-right: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.footer-text p:hover i {
+    transform: scale(1.2) rotate(360deg);
+    color: var(--secondary-500);
+}
+
+/* Page Transitions */
+.page {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    display: none;
+}
+
+.page.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Loading Animation */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.loading.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loading-spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid var(--border-light);
+    border-top-color: var(--primary-500);
+    border-right-color: var(--secondary-500);
+    border-bottom-color: var(--accent-500);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Hiệu ứng ripple khi click */
+.ripple-effect {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, transparent 70%);
+    transform: scale(0);
+    animation: ripple 0.6s ease-out;
+    pointer-events: none;
+}
+
+@keyframes ripple {
+    to { transform: scale(4); opacity: 0; }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .container { padding: 1.5rem; }
+    .subject-title { font-size: 3rem; }
+    .section-title h2 { font-size: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .subject-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .subject-card { padding: 2rem 1rem; }
+    .subject-icon { font-size: 3rem; }
+    
+    .quick-nav {
+        border-radius: 20px;
+        padding: 0.5rem;
+    }
+    
+    .quick-item {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .content-box { padding: 1.5rem; }
+    .structure-box { padding: 1.5rem; }
+    .box-header h3 { font-size: 1.5rem; }
+    .subject-title { font-size: 2.5rem; }
+    .section-title h2 { font-size: 2rem; }
+}
+
+@media (max-width: 480px) {
+    .subject-grid { grid-template-columns: 1fr; }
+    
+    .quick-nav {
+        flex-direction: column;
+        border-radius: 20px;
+    }
+    
+    .quick-item {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .countdown-wrapper { padding: 1rem 1.5rem; }
+    .countdown-text { font-size: 1rem; }
+    .subject-title { font-size: 2rem; }
+}
+</style>
+</head>
+
+<body data-theme="light">
+
+<!-- Loading Animation -->
+<div class="loading" id="loading">
+    <div class="loading-spinner"></div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <img src="meobao.png" alt="LuyệnThi24h" class="logo-img" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'50\' height=\'50\' viewBox=\'0 0 100 100\'%3E%3Crect width=\'100\' height=\'100\' fill=\'%234178db\' rx=\'20\'/%3E%3Ctext x=\'50\' y=\'70\' font-size=\'50\' text-anchor=\'middle\' fill=\'white\' font-weight=\'bold\'%3ELT%3C/text%3E%3C/svg%3E'">
+            <div class="logo-text">
+                <h1>MèoÔnThi</h1>
+                <p>Ôn thi THPT Quốc Gia 2026</p>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a class="nav-link" onclick="goHome()">
+                <i class="fas fa-home"></i> Trang chủ
+            </a>
+            <a class="nav-link" onclick="showStructure()">
+                <i class="fas fa-book-open"></i> Cấu trúc đề
+            </a>
+            <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- HOME PAGE -->
+<div id="homePage" class="container page active">
+    <div class="hero-section">
+        <div class="hero-content">
+            <div class="countdown-wrapper" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="countdown-text" id="homeCountdown">
+                    <i class="fas fa-clock"></i> Đang tính thời gian...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-title" data-aos="fade-up">
+        <h2>Môn học</h2>
+        <p>Chọn môn để bắt đầu ôn tập</p>
+    </div>
+
+    <div class="subject-grid">
+        <div class="subject-card" onclick="showSubject('Toán')" data-aos="flip-up" data-aos-delay="100">
+            <div class="subject-icon"><i class="fas fa-calculator"></i></div>
+            <h3>Toán</h3>
+            <p>Đại số - Giải tích - Hình học</p>
+        </div>
+        <div class="subject-card" onclick="showSubject('Ngữ Văn')" data-aos="flip-up" data-aos-delay="200">
+            <div class="subject-icon"><i class="fas fa-book"></i></div>
+            <h3>Ngữ Văn</h3>
+            <p>Đọc hiểu - Nghị luận</p>
+        </div>
+        <div class="subject-card" onclick="showSubject('Vật Lý')" data-aos="flip-up" data-aos-delay="300">
+            <div class="subject-icon"><i class="fas fa-flask"></i></div>
+            <h3>Vật Lý</h3>
+            <p>Cơ - Điện - Quang - Nhiệt</p>
+        </div>
+        <div class="subject-card" onclick="showSubject('Hóa Học')" data-aos="flip-up" data-aos-delay="400">
+            <div class="subject-icon"><i class="fas fa-dna"></i></div>
+            <h3>Hóa Học</h3>
+            <p>Hữu cơ - Vô cơ</p>
+        </div>
+        <div class="subject-card" onclick="showSubject('Lịch Sử')" data-aos="flip-up" data-aos-delay="500">
+            <div class="subject-icon"><i class="fas fa-landmark"></i></div>
+            <h3>Lịch Sử</h3>
+            <p>Việt Nam - Thế giới</p>
+        </div>
+    </div>
+</div>
+
+<!-- SUBJECT PAGE -->
+<div id="subjectPage" class="container page">
+    <div class="quick-nav" data-aos="fade-down">
+        <div class="quick-item" onclick="quickSwitchSubject('Toán')" id="quickMath">
+            <i class="fas fa-calculator"></i> Toán
+        </div>
+        <div class="quick-item" onclick="quickSwitchSubject('Ngữ Văn')" id="quickVan">
+            <i class="fas fa-book"></i> Ngữ Văn
+        </div>
+        <div class="quick-item" onclick="quickSwitchSubject('Vật Lý')" id="quickLy">
+            <i class="fas fa-flask"></i> Vật Lý
+        </div>
+        <div class="quick-item" onclick="quickSwitchSubject('Hóa Học')" id="quickHoa">
+            <i class="fas fa-dna"></i> Hóa Học
+        </div>
+        <div class="quick-item" onclick="quickSwitchSubject('Lịch Sử')" id="quickSu">
+            <i class="fas fa-landmark"></i> Lịch Sử
+        </div>
+    </div>
+
+    <h2 id="subjectTitle" class="subject-title" data-aos="zoom-in">Toán</h2>
+
+    <div class="content-box" data-aos="fade-up">
+        <div class="box-header">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>📚 Kiến thức trọng tâm</h3>
+        </div>
+        <ul class="content-list" id="subjectContent"></ul>
+    </div>
+
+    <div class="content-box" data-aos="fade-up" data-aos-delay="100">
+        <div class="box-header">
+            <i class="fas fa-file-alt"></i>
+            <h3>📄 File đề ôn tập (có đáp án & hướng dẫn giải)</h3>
+        </div>
+        <ul class="content-list" id="subjectFiles"></ul>
+    </div>
+
+    <div class="btn-center">
+        <button class="btn btn-secondary" onclick="goHome()">
+            <i class="fas fa-arrow-left"></i> Quay lại Trang chủ
+        </button>
+    </div>
+</div>
+
+<!-- STRUCTURE PAGE -->
+<div id="structurePage" class="container page">
+    <h2 class="subject-title" data-aos="zoom-in">Cấu trúc đề thi THPT Quốc Gia</h2>
+
+    <div class="structure-box" data-aos="fade-up">
+        <h3><i class="fas fa-book"></i> 📑 Cấu trúc từng môn</h3>
+        <ul>
+            <li>Toán: 12 câu trắc nghiệm chọn đáp án đúng - 4 câu trắc nghiệm Đúng/Sai - 6 câu trắc nghiệm trả lời ngắn</li>
+            <li>Ngữ Văn: Đọc hiểu (5 câu) + Viết văn nghị luận xã hội và văn học(2 câu)</li>
+            <li>Lịch Sử: 24 câu trắc nghiệm chọn đáp án đúng - 4 câu trắc nghiệm Đúng/Sai.</li>
+            <li>Lí,Hóa: 18 câu trắc nghiệm chọn đáp án đúng - 4 câu trắc nghiệm Đúng/Sai - 6 câu trắc nghiệm trả lời ngắn</li>
+        </ul>
+    </div>
+
+    <div class="structure-box" data-aos="fade-up" data-aos-delay="100">
+        <h3><i class="fas fa-calculator"></i> 🧮 Cách tính điểm</h3>
+        <h4>Đối với Toán.</h4>
+        <ul>
+            <li>12 câu trắc nghiệm chọn đáp án đúng, mỗi câu được 0.25 => 12 câu 3 điểm.</li>
+            <li>4 câu trắc nghiệm Đúng/Sai. Mỗi câu 4 ý, đúng 1 ý được 0.1, 2 ý được 0.25, 3 ý được 0.5, 4 ý được 1 điểm => 4 câu 4 điểm.</li>
+            <li>6 câu trắc nghiệm trả lời ngắn, mỗi câu được 0.5 điểm => 6 câu 3 điểm.</li>
+        </ul>
+
+        <h4>Đối với Ngữ Văn.</h4>
+        <ul>
+            <li>Phần I Đọc hiểu, 5 câu 4 điểm.</li>
+            <li>Phần II Viết, 2 câu 6 điểm.</li>
+        </ul>
+
+        <h4>Đối với Lí, Hóa.</h4>
+        <ul>
+            <li>18 câu trắc nghiệm chọn đáp án đúng, mỗi câu được 0.25 => 18 câu 4.5 điểm.</li>
+            <li>4 câu trắc nghiệm Đúng/Sai. Mỗi câu 4 ý, đúng 1 ý được 0.1, 2 ý được 0.25, 3 ý được 0.5, 4 ý được 1 điểm => 4 câu 4 điểm.</li>
+            <li>6 câu trắc nghiệm trả lời ngắn, mỗi câu được 0.25 điểm => 6 câu 1,5 điểm.</li>
+        </ul>
+
+        <h4>Đối với Lịch Sử.</h4>
+        <ul>
+            <li>24 câu trắc nghiệm chọn đáp án đúng, mỗi câu được 0,25 => 24 câu 6 điểm.</li>
+            <li>4 câu đúng sai. Mỗi câu 4 ý, đúng 1 ý được 0.1 , 2 ý được 0.25 , 3 ý được 0.5 , 4 ý được 1 điểm => 4 câu 4 điểm.</li>
+        </ul>
+    </div>
+
+    <div class="structure-box" data-aos="fade-up" data-aos-delay="200">
+        <h3><i class="fas fa-clock"></i> ⏰ Thời gian làm bài</h3>
+        <ul>
+            <li>Toán: 90 phút</li>
+            <li>Ngữ Văn: 120 phút</li>
+            <li>Lý, Hóa, Sử: 50 phút/môn</li>
+        </ul>
+    </div>
+
+    <div class="btn-center">
+        <button class="btn btn-primary" onclick="goHome()">
+            <i class="fas fa-home"></i> Về trang chủ
+        </button>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-text">
+            <p><i class="fas fa-copyright"></i> 2026 LuyệnThi24h</p>
+            <p><i class="fas fa-envelope"></i> phamvietdat2612@gmail.com</p>
+            <p><i class="fas fa-users"></i> Nhóm 5 - lớp 12/3 - trường THPT Ông Ích Khiêm</p>
+            <p><i class="fas fa-book"></i> Nguồn: tailieuonthi.org, scribd.com</p>
+        </div>
+    </div>
+</footer>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+// Initialize AOS
+AOS.init({
+    duration: 1000,
+    once: true,
+    mirror: false,
+    easing: 'ease-out-cubic'
+});
+
+// Remove loading screen
+window.addEventListener('load', function() {
+    document.getElementById('loading').classList.add('hidden');
+    setTimeout(() => {
+        document.getElementById('loading').style.display = 'none';
+    }, 500);
+});
+
+// Theme toggle
+function toggleTheme() {
+    const body = document.body;
+    const currentTheme = body.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    body.setAttribute('data-theme', newTheme);
+    
+    const btn = document.getElementById('themeBtn');
+    btn.innerHTML = newTheme === 'light' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+    
+    btn.style.transform = 'rotate(180deg) scale(1.2)';
+    setTimeout(() => {
+        btn.style.transform = '';
+    }, 300);
+}
+
+// Countdown timer
+const examDate = new Date("June 11, 2026 7:30:00").getTime();
+
+function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = examDate - now;
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    const text = distance > 0 
+        ? `<i class="fas fa-hourglass-half"></i> Còn ${days} ngày ${hours} giờ ${minutes} phút ${seconds} giây nữa đến kì thi THPT Quốc Gia 2026`
+        : '<i class="fas fa-check-circle"></i> Hôm nay là ngày thi! Chúc bạn làm bài tốt!';
+    
+    document.getElementById('homeCountdown').innerHTML = text;
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
+// Page navigation
+let currentSubject = 'Toán';
+
+function showPage(pageId) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById(pageId).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function goHome() { showPage('homePage'); }
+function showStructure() { showPage('structurePage'); }
+
+function updateQuickNav(subject) {
+    document.querySelectorAll('.quick-item').forEach(item => item.classList.remove('active'));
+    const id = 'quick' + subject.replace(' ', '').replace('Ngữ', 'Van').replace('Vật', 'Ly').replace('Hóa', 'Hoa').replace('Lịch', 'Su');
+    const activeItem = document.getElementById(id);
+    if (activeItem) activeItem.classList.add('active');
+}
+
+function quickSwitchSubject(subject) { showSubject(subject); }
+
+function showSubject(subject) {
+    showPage('subjectPage');
+    currentSubject = subject;
+    
+    document.getElementById('subjectTitle').innerHTML = subject;
+    updateQuickNav(subject);
+
+    const content = document.getElementById('subjectContent');
+    const files = document.getElementById('subjectFiles');
+
+    if (subject === 'Toán') {
+        content.innerHTML = `
+            <li>Giá trị lớn nhất, nhỏ nhất, đường tiệm cận, đồ thị hàm số</li>
+            <li>Đạo hàm - Ứng dụng của đạo hàm</li>
+            <li>Hàm số Lũy Thừa, Mũ, Logarit</li>
+            <li>Nguyên Hàm - Tích Phân</li>
+            <li>Hình học không gian Oxyz</li>
+            <li>Phương trình mặt phẳng, phương trình đường thẳng, phương trình mặt cầu, công thức tính góc</li>
+            <li>Xác suất - Thống kê</li>
+            <li><a href="https://drive.google.com/file/d/1wVOuyjOi3RYBfiwXqMsF7LEZ_ng7ZAUA/preview" target="_blank">📄 Lý thuyết toán 10,11,12</a></li>
+        `;
+        files.innerHTML = `
+            <li><a href="https://drive.google.com/file/d/1dszkkW4zU_87aeOCrbo5IJBZMOv1SYn9/preview" target="_blank">📄 Đề trường THPT chuyên Bắc Ninh</a></li>
+            <li><a href="https://drive.google.com/file/d/1ipRvQ4ifePTnnGPUE971xtIidrIcI8wf/preview" target="_blank">📄 Đề trường THPT Đào Duy Từ</a></li>
+            <li><a href="https://drive.google.com/file/d/1arSSm4rETc1IJKmxUT5Zf60WBF9_Gdr-/preview" target="_blank">📄 Đề cụm trường QV1-TT1-LVT Bắc Ninh</a></li>
+            <li><a href="https://drive.google.com/file/d/1el6nlth2SH9rEpDzAIXx0J2m1mlWm2Kk/preview" target="_blank">📄 Đề liên cấp đại học Hồng Đức</a></li>
+            <li><a href="https://drive.google.com/file/d/1zgxtVdOuMxFpu90DSRM7DYKowuQ5QBGJ/preview" target="_blank">📄 Đề trường THPT Nguyễn Khuyến-Lê Thánh Tông</a></li>
+            <li><a href="https://drive.google.com/file/d/1nvbLgk31PkGoiRAOhoRW5N4je87rlCo0/preview" target="_blank">📄 Đề trường THPT An Dương-Hải Phòng</a></li>
+            <li><a href="https://drive.google.com/file/d/1mOoSm7f6y8K5Acf8UQkxW8Ay4mo8D_3e/preview" target="_blank">📄 Đề liên trường THPT Nguyễn Viết Xuân-Phú Thọ</a></li>
+            <li><a href="https://drive.google.com/file/d/1h7m5Gm9d2oEKQ93js7TS7zGGfq7o5aEg/preview" target="_blank">📄 Đề cụm liên trường Nghệ An</a></li>
+            <li><a href="https://drive.google.com/file/d/1otE78I0bjACmDXlKnH7FP2aoMIWN-Qug/preview" target="_blank">📄 Đề trường THPT Yên Mô B-Ninh Bình</a></li>
+            <li><a href="https://drive.google.com/file/d/1D5BrhT83z-r7_l5rKKa9trCw0Ghvexc7/preview" target="_blank">📄 Đề trường THPT Nguyễn Khuyến-Bình Dương</a></li>
+            <li><a href="https://drive.google.com/file/d/19wm76sEtGCGQeKR-y4w9Q0c4fT-7Mpqv/preview" target="_blank">📄 Đề trường THCS-THPT Nguyễn Khuyến-TP Hồ Chí Minh</a></li>
+        `;
+    } else if (subject === 'Ngữ Văn') {
+        content.innerHTML = `
+            <li><h3>Phần I Đọc Hiểu (4 điểm)</h3></li>
+            <li>Kiến thức nền: Nắm chắc đặc điểm các thể loại: Truyện ngắn, Thơ trữ tình, Kí, Kịch.</li>
+            <li>Kỹ năng: Nhận diện và nêu tác dụng của các biện pháp tu từ (ẩn dụ, nhân hóa, liệt kê...), xác định phương thức biểu đạt, phong cách ngôn ngữ, nội dung chính của văn bản.</li>
+            <li>Lưu ý: Trả lời ngắn gọn, trực tiếp, không lan man.</li>
+            <li><h3>Phần II Nghị luận (6 điểm)</h3></li>
+            <li><h4>Nghị luận văn học</h4></li>
+            <li>Đề tài: Thơ, Truyện, Kí/Tùy bút, Kịch.</li>
+            <li><h4>Kĩ năng cần ôn khi viết nghị luận văn học</h4></li>
+            <li>Lập dàn ý chi tiết: Luận điểm rõ ràng, mạch lạc.</li>
+            <li>Phân tích thơ: Tránh lỗi "diễn xuôi thơ", chú ý nghệ thuật, từ ngữ, hình ảnh.</li>
+            <li>Phân tích văn xuôi: Nắm vững nhân vật, tình huống truyện, ngôn ngữ nghệ thuật.</li>
+            <li>Học thuộc dẫn chứng cốt lõi, các nhận định văn học hay để nâng cao chất lượng bài viết.</li>
+            <li><h4>Nghị luận xã hội</h4></li>
+            <li>Dạng bài: Thường là đoạn văn 200 chữ về tư tưởng đạo lý hoặc hiện tượng đời sống.</li>
+            <li>Nội dung: Cập nhật các vấn đề thời sự, xã hội nổi bật. Rèn luyện tư duy phản biện (trái chiều, mở rộng vấn đề).</li>
+            <li>Cấu trúc: Mở đoạn (nêu vấn đề) -> Thân đoạn (giải thích, phân tích, dẫn chứng, bình luận) -> Kết đoạn (bài học).</li>
+            <li>Lưu ý: Dẫn chứng cần cụ thể, tiêu biểu, tránh dẫn chứng chung chung.</li>
+            <li><h4>Kĩ năng cần ôn khi viết nghị luận xã hội</h4></li>
+            <li>Tìm hiểu đề (Phân tích đề): Gạch chân từ khóa, xác định đúng vấn đề trọng tâm (tư tưởng đạo lý hay hiện tượng đời sống), phạm vi dẫn chứng và thao tác lập luận chính.</li>
+            <li>Lập dàn ý và xây dựng luận điểm: Sắp xếp các ý theo trình tự logic, chặt chẽ. Luận điểm cần sâu sắc, mới mẻ, tránh kể lể dài dòng.</li>
+            <li>Giải thích và phân tích: Định nghĩa rõ ràng vấn đề, trả lời câu hỏi "Tại sao?", "Như thế nào?" để làm rõ bản chất.</li>
+            <li>Lấy và phân tích dẫn chứng: Sử dụng dẫn chứng thực tế, tiêu biểu, mang tính thời sự thay vì dẫn chứng chung chung.</li>
+            <li>Lập luận, phản biện (lật ngược vấn đề): Nhìn nhận vấn đề ở nhiều chiều, phản bác các quan điểm trái chiều để tăng tính thuyết phục.</li>
+            <li>Liên hệ và rút ra bài học: Rút ra bài học nhận thức và hành động thiết thực cho bản thân và cộng đồng.</li>
+            <li>Diễn đạt và trình bày: Sử dụng ngôn từ thuyết phục, câu văn liên kết, đảm bảo đúng dung lượng (như 600 chữ) và sáng tạo trong cách viết.</li>
+            <li><h4>Kĩ năng và lưu ý trước khi làm bài</h4></li>
+            <li>Trình bày: Chữ viết rõ ràng, không tẩy xóa, tuân thủ cấu trúc câu, đoạn.</li>
+            <li>Thời gian: Phân bổ hợp lý (đọc hiểu 15-20p, NLVH 20-25p, NLXH 70-80p).</li>
+            <li>Tư duy: Không học vẹt văn mẫu, nắm chắc kiến thức cơ bản và phát huy dấu ấn cá nhân. </li>
+            <li>Chú ý: Nghị luận văn học 2 điểm và nghị luận xã hội 4 điểm nhưng có thể đổi cho nhau.</li>
+            <li><a href="https://drive.google.com/file/d/1ho2_YmABf9iicKFO6pmZ3uQy9Wd3-tlD/preview" target="_blank">📄 Lý thuyết ôn tập Ngữ văn THPTQG</a></li>
+        `;
+        files.innerHTML = `
+            <li><a href="https://drive.google.com/file/d/1oUiYRTeR8ZNuycMyCGiMnOTrf-5p_ygV/preview" target="_blank">📄 Đề thi thử TN Yên Bái</a></li>
+            <li><a href="https://drive.google.com/file/d/1vNBN7hfvr1UeBLOsrohsMx0POzofmTyL/preview" target="_blank">📄 Đề thi tham khảo Bộ Giáo Dục và Đào Tạo</a></li>
+            <li><a href="https://drive.google.com/file/d/1qoOadCZG8MJ743m4J-M-MH6b_OwvvOfo/preview" target="_blank">📄 Đề thi thử TN Ninh Bình</a></li>
+            <li><a href="https://drive.google.com/file/d/1G0tUWQ2CYLuttrmw978K2D53Hpil2_-t/preview" target="_blank">📄 Đề thi thử TN Trường THPT Kiến An-Hải Phòng</a></li>
+            <li><a href="https://drive.google.com/file/d/1QyC9Sh_WtFmu7krWuv3W8En8Qj4WNnqm/preview" target="_blank">📄 Đề thi thử TN Liên Trường THPT-Nghệ An</a></li>
+            <li><a href="https://drive.google.com/file/d/1RgMoJZZSSKOJEsiWOxs0YBvUXHn6kpdC/preview" target="_blank">📄 Đề thi thử TN Trường THPT Hàm Rồng</a></li>
+            <li><a href="https://drive.google.com/file/d/11RyDuqL0DJmYnhiPXqikWyUpbVMw0hpJ/preview" target="_blank">📄 Đề thi thử TN Trường THPT Nguyễn Thị Giang-Vĩnh Phúc</a></li>
+            <li><a href="https://drive.google.com/file/d/1SPxnZYYGeUTBvxnqZitwWqNOwKTdAKUo/preview" target="_blank">📄 Đề thi thử TN Tỉnh Bắc Ninh</a></li>
+        `;
+    } else if (subject === 'Vật Lý') {
+        content.innerHTML = `
+            <li><h3>Kiến thức trọng tâm cần ôn</h3></li>
+            <li>Vật lý nhiệt: Tìm hiểu sâu về trạng thái chất (rắn, lỏng, khí), sự chuyển thể, và các định luật nhiệt động lực học ứng dụng.</li>
+            <li>Điện từ trường: Nắm vững các hiện tượng điện và từ, đặc biệt là các bài tập đồ thị liên quan.</li>
+            <li>Chương trình Vật lý 12: Hệ thống lại kiến thức 9 chương trong sách giáo khoa mới, bám sát các dạng bài tập trắc nghiệm cơ bản đến nâng cao.</li>
+            <li>Kỹ năng giải đề: Rèn luyện tư duy logich, kỹ năng đọc đồ thị và xử lý các bài tập thực tế.</li>
+            <li><a href="https://drive.google.com/file/d/1Hvl4OGcErNnN3YDTl4vulQqedeHxd5PQ/preview" target="_blank">📄 Lý thuyết ôn tập Vật lý THPTQG</a></li>
+        `;
+        files.innerHTML = `
+            <li><a href="https://drive.google.com/file/d/1UZbCIDORB8o14rXeauXYNYA8HIakuE3V/preview" target="_blank">📄 Đề thi thử liên trường THPT Bắc Ninh</a></li>
+            <li><a href="https://drive.google.com/file/d/1nlt7GrlIH_MULWV3taDFRKZ0xvZPfM71/preview" target="_blank">📄 Đề thi thử trường Quế Võ 1-Bắc Ninh</a></li>
+            <li><a href="https://drive.google.com/file/d/1RpDMKQePGaBt9dUBeay5b5HKgJs96XUl/preview" target="_blank">📄 Đề minh họa trường THPT Lê Thánh Tông-Hồ Chí Minh</a></li>
+            <li><a href="https://drive.google.com/file/d/1H89PsbcKaN4mDXzYl8vWd1WbqjL34bYV/preview" target="_blank">📄 Đề minh họa trường Nguyễn Khuyến-Lê Thánh Tông-Hồ Chí Minh</a></li>
+            <li><a href="https://drive.google.com/file/d/1lEBE2M9EVuqDHLa47aRy2PxSZcMz3es2/preview" target="_blank">📄 Đề minh họa trường Ngô Gia Tự-Phú Thọ</a></li>
+            <li><a href="https://drive.google.com/file/d/1H-UnBKxHWRveDwVNZWl-cbytX_p2ZweL/preview" target="_blank">📄 Đề minh họa sở Bắc Ninh-Cụm Bắc Ninh</a></li>
+            <li><a href="https://drive.google.com/file/d/1XSwSbZZIJuiZs-D116inEB4aU4QW6SgS/preview" target="_blank">📄 Đề minh họa trường chuyên KHTN-Hà Nội</a></li>
+            <li><a href="https://drive.google.com/file/d/1M_eC4ZW3wZhyMM4512C9bxJc1tTsfkfE/preview" target="_blank">📄 Đề minh họa sở Ninh Bình</a></li>
+            <li><a href="https://drive.google.com/file/d/1oUmIpqoyc5WYkOBSBVi_hrs1KHF7-b6d/preview" target="_blank">📄 Đề minh họa liên trường THPT Nghệ An</a></li>
+        `;
+    } else if (subject === 'Hóa Học') {
+        content.innerHTML = `
+            <li><h3>Kiến thức trọng tâm cần ôn</h3></li>
+            <li><h4>Hóa Hữu Cơ</h4></li>
+            <li>Este - Lipit: Nắm chắc lý thuyết, phản ứng xà phòng hóa, bài tập tính toán đốt cháy, este hóa.</li>
+            <li>Carbohydrat (Cacbohidrat): Tính chất của Glucose, Fructose, Saccharose, Tinh bột, Xenlulozo (phản ứng tráng bạc, thủy phân).</li>
+            <li>Amin, Amino axit, Protein: Tính lưỡng tính, cấu tạo, phản ứng peptit.</li>
+            <li>Polime và vật liệu polime: Phân loại, phương pháp điều chế.</li>
+            <li><h4>Hóa Vô Cơ</h4></li>
+            <li>Đại cương kim loại: Dãy điện hóa, ăn mòn kim loại, các dạng bài tập điện phân, nhiệt luyện, thủy luyện.</li>
+            <li>Pin và Điện phân</li>
+            <li>Đại cương về kim loại: Cấu tạo, tính chất, các phương pháp tách kim loại</li>
+            <li>Nguyên tố nhóm IA và IIA</li>
+            <li>Dãy kim loại chuyển tiếp thứ nhất, phức chất, tính chất và ứng dụng</li>
+            <li><a href="https://drive.google.com/file/d/1CrMh6gfFWxI56OO8QJi-wKBle4eyBVve/preview" target="_blank">📄 Lý thuyết ôn tập Hóa Học THPTQG</a></li>
+        `;
+        files.innerHTML = `
+            <li><a href="https://drive.google.com/file/d/1O0j6Cwpf7nrNjbgzxGD9f04GYRe5SVHl/preview" target="_blank">📄 Đề minh họa trường THPT Lương Tài số 2-Bắc Ninh</a></li>
+            <li><a href="https://drive.google.com/file/d/1RL9flxt0MM3zYEbIWjqqYsgxf5H-385t/preview" target="_blank">📄 Đề minh họa trường THPT chuyên Bắc Ninh</a></li>
+            <li><a href="https://drive.google.com/file/d/14ZGw_4pJPEDyIhR3gzKAOYkhc8ntactx/preview" target="_blank">📄 Đề minh họa trường THPT Đồng Đậu-Phú Thọ</a></li>
+            <li><a href="https://drive.google.com/file/d/1C5fcnP0lNkkA4-MqJZotMW-5vUT5Z5HX/preview" target="_blank">📄 Đề minh họa cụm liên trường THPT QV1-TT1-LVT Bắc Ninh</a></li>
+            <li><a href="https://drive.google.com/file/d/1BbH69yKmcqHROw91sIyky2lLBWa9AWvr/preview" target="_blank">📄 Đề minh họa cụm trường THPT Hiệp Hòa-Ngô Sĩ Liên-Tiên Du</a></li>
+            <li><a href="https://drive.google.com/file/d/1ouLElkS2uShQzjJG-PwCkuXwB1Ywr4RO/preview" target="_blank">📄 Đề minh họa trường THPT Hàn Thuyên Bắc Ninh</a></li>
+            <li><a href="https://drive.google.com/file/d/1gY1As0z7me_MraOXcJ6s0atZeH0YNGbY/preview" target="_blank">📄 Đề minh họa trường liên trường THPT tỉnh Nghệ An</a></li>
+            <li><a href="https://drive.google.com/file/d/1YzdptbSobJVKdZDwoOppH30k1-q0ymn0/preview" target="_blank">📄 Đề minh họa tỉnh Ninh Bình</a></li>
+            <li><a href="https://drive.google.com/file/d/1OpBhXJ7TKAbbVqjyCaOzvVfI2P6sLqOi/preview" target="_blank">📄 Đề minh họa trường THPT Nguyễn Thị Giang-Phú Thọ</a></li>
+            <li><a href="https://drive.google.com/file/d/1uhEGZ04QSTk_8J3cjxrUDioxDWu7zAkU/preview" target="_blank">📄 Đề minh họa trường THPT Hưng Nhân tỉnh Hưng Yên</a></li>
+        `;
+    } else if (subject === 'Lịch Sử') {
+        content.innerHTML = `
+            <li><h3>Kiến thức trọng tâm</h3></li>
+            <li><h4>Lịch sử Việt Nam (Chiếm khoảng 70%):</h4> Đây là phần quan trọng nhất, tập trung chủ yếu vào chương trình lớp 12.</li>
+            <li>Giai đoạn 1919 - 1930: Sự chuyển biến kinh tế - xã hội, các khuynh hướng cứu nước và sự ra đời của Đảng Cộng sản Việt Nam.</li>
+            <li>Giai đoạn 1930 - 1945: Các phong trào cách mạng (30-31, 36-39, 39-45) và thắng lợi của Cách mạng tháng Tám.</li>
+            <li>Giai đoạn 1945 - 1954: Cuộc kháng chiến chống thực dân Pháp (chiến dịch Việt Bắc, Biên giới, Điện Biên Phủ).</li>
+            <li>Giai đoạn 1954 - 1975: Kháng chiến chống Mỹ cứu nước và các chiến lược chiến tranh của Mỹ (Chiến tranh đặc biệt, Cục bộ, Việt Nam hóa chiến tranh).</li>
+            <li>Giai đoạn 1975 - 2000: Đổi mới đất nước và hội nhập quốc tế.</li>
+            <li><h4>Lịch sử Thế giới (Chiếm khoảng 30%)</h4></li>
+            <li>Trật tự thế giới mới sau Chiến tranh thế giới thứ hai (Hệ thống Yalta, Liên Hợp Quốc).</li>
+            <li>Sự hình thành và tan rã của hệ thống xã hội chủ nghĩa.</li>
+            <li>Phong trào giải phóng dân tộc ở Á, Phi, Mỹ Latinh.</li>
+            <li>Quan hệ quốc tế và Chiến tranh lạnh.</li>
+            <li>Cách mạng khoa học - công nghệ và xu thế toàn cầu hóa. </li>
+            <li><a href="https://drive.google.com/file/d/14JnloxjQQbFN15AXnv-kqR0_y-OoQUyx/preview" target="_blank">📄 Lý thuyết Lịch Sử</a></li>
+        `;
+        files.innerHTML = `
+            <li><a href="https://drive.google.com/file/d/1Up66902Ec9d2Os2446Uj-MVilLfZdHw1/preview" target="_blank">📄 Đề minh họa sở tỉnh Ninh Bình</a></li>
+            <li><a href="https://drive.google.com/file/d/1iJteBv-jDRBrmCDadSjdZz_AZy17qkgN/preview" target="_blank">📄 Đề minh họa sở tỉnh Yên Bái</a></li>
+            <li><a href="https://drive.google.com/file/d/1HjVkD61YT30bcWiNhUGGiA-xMTz6Ir6W/preview" target="_blank">📄 Đề minh họa trường THPT Lê Văn Thịnh-Bắc Ninh</a></li>
+            <li><a href="https://drive.google.com/file/d/1lNirfKJ8sJWCGuUMMWxkl915P53UHHxT/preview" target="_blank">📄 Đề minh họa tham khảo của Bộ Giáo Dục và Đào Tạo năm 2025</a></li>
+            <li><a href="https://drive.google.com/file/d/1zzUGoBFKEkUSar-hdw-3C7s1oZ-HHPoO/preview" target="_blank">📄 Đề minh họa trường THPT Chương Mỹ A</a></li>
+            <li><a href="https://drive.google.com/file/d/1kfOh5b0NZ5kGLgwXB16dOW-pA7UUO0jK/preview" target="_blank">📄 Đề minh họa trường THPT Hàm Rồng-Thanh Hóa</a></li>
+            <li><a href="https://drive.google.com/file/d/14oek2j5JTJkBCUHMdiKM3OqJmhv6CD4i/preview" target="_blank">📄 Đề minh họa trường THPT Liên Trường-Nghệ An</a></li>
+            <li><a href="https://drive.google.com/file/d/14bPDbmrRO7LgNPk6Mzbabf9-CIdOoyRG/preview" target="_blank">📄 Đề minh họa tỉnh Hà Tĩnh</a></li>
+            <li><a href="https://drive.google.com/file/d/1Kk5Xp9a2RmaA1nv4KomYpDDMNXyyJx2Q/preview" target="_blank">📄 Đề minh họa trường THPT Kẻ Sặt-Hải Dương</a></li>
+            <li><a href="https://drive.google.com/file/d/1DwXYGvIniKX0JTWbXBrz7PuKcLhJNU6W/preview" target="_blank">📄 Đề minh họa sở tỉnh Vĩnh Phúc</a></li>
+        `;
+    }
+}
+
+// Browser history
+window.onpopstate = function(event) {
+    if (event.state && event.state.page) {
+        showPage(event.state.page);
+        if (event.state.page === 'subjectPage' && event.state.subject) {
+            showSubject(event.state.subject);
+        }
+    } else {
+        showPage('homePage');
+    }
+};
+
+// Initial state
+history.replaceState({ page: 'homePage' }, '');
+
+// Ripple effect on click
+document.addEventListener('click', function(e) {
+    const ripple = document.createElement('div');
+    ripple.className = 'ripple-effect';
+    ripple.style.left = e.clientX + 'px';
+    ripple.style.top = e.clientY + 'px';
+    document.body.appendChild(ripple);
+    
+    setTimeout(() => {
+        ripple.remove();
+    }, 600);
+});
+
+// Navbar scroll effect
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.style.background = 'rgba(var(--bg-primary), 0.9)';
+        navbar.style.backdropFilter = 'blur(20px)';
+    } else {
+        navbar.style.background = 'rgba(var(--bg-primary), 0.7)';
+        navbar.style.backdropFilter = 'blur(10px)';
+    }
+});
+</script>
+
+<!-- Firebase -->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyD3rtDFHTs_sgeZlkxvvsRfDecPzlFDOAg",
+    authDomain: "onthi123-c1a43.firebaseapp.com",
+    projectId: "onthi123-c1a43",
+    storageBucket: "onthi123-c1a43.firebasestorage.app",
+    messagingSenderId: "422550476710",
+    appId: "1:422550476710:web:f0d0db3d53cb5fedf0a167"
+};
+
+const app = initializeApp(firebaseConfig);
+console.log("Firebase initialized");
+</script>
+</body>
+</html>
